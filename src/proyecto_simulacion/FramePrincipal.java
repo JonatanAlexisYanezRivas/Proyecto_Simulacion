@@ -5,6 +5,7 @@
  */
 package proyecto_simulacion;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,7 +13,9 @@ import javax.swing.JOptionPane;
  * @author Batman
  */
 public class FramePrincipal extends javax.swing.JFrame {
-
+ArrayList<ComOne> Lista = new ArrayList<>();
+ArrayList<ComOne> Lista2  = new ArrayList<>();
+ArrayList<ComOne> Lista3 = new ArrayList<>();
     /**
      * Creates new form FramePrincipal
      */
@@ -60,8 +63,15 @@ public class FramePrincipal extends javax.swing.JFrame {
         kl3 = new javax.swing.JLabel();
         Costo3 = new javax.swing.JLabel();
         CostoT = new javax.swing.JLabel();
+        num = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -69,60 +79,60 @@ public class FramePrincipal extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Combustible 1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 110, 40));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 110, 40));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Combustible 2");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, 110, 40));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 60, 110, 40));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Combustible 3");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, 110, 40));
-        getContentPane().add(c2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 210, 90, -1));
-        getContentPane().add(a2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 90, -1));
-        getContentPane().add(b2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 90, -1));
-        getContentPane().add(c1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 90, -1));
-        getContentPane().add(a1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 90, -1));
-        getContentPane().add(b1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 90, -1));
-        getContentPane().add(c3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 90, -1));
-        getContentPane().add(a3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, 90, -1));
-        getContentPane().add(b3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, 90, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 60, 110, 40));
+        getContentPane().add(c2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, 90, -1));
+        getContentPane().add(a2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 90, -1));
+        getContentPane().add(b2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 90, -1));
+        getContentPane().add(c1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 90, -1));
+        getContentPane().add(a1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 90, -1));
+        getContentPane().add(b1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 90, -1));
+        getContentPane().add(c3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, 90, -1));
+        getContentPane().add(a3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, 90, -1));
+        getContentPane().add(b3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, 90, -1));
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Pruebas");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 70, 70, 30));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 60, 70, 30));
 
         jLabel5.setFont(new java.awt.Font("Rockwell", 1, 17)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("SIMULACIÓN PARA OBTENER LOS LITROS A USAR DE COMBUSTIBLE");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, -20, 640, 80));
-        getContentPane().add(probabilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 80, -1));
-        getContentPane().add(txtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, 80, -1));
-        getContentPane().add(txtk, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, 80, -1));
+        getContentPane().add(probabilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 100, 80, -1));
+        getContentPane().add(txtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 150, 80, -1));
+        getContentPane().add(txtk, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 200, 80, -1));
 
         jLabel7.setText("a");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 41, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 41, -1));
 
         jLabel8.setText("b");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 41, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 41, -1));
 
         jLabel9.setText("c");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 41, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 41, -1));
 
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("p");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 48, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 100, 48, -1));
 
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("n");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 150, 30, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 150, 30, -1));
 
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("k");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 48, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 200, 48, -1));
 
         btnGO.setText("GO");
         btnGO.addActionListener(new java.awt.event.ActionListener() {
@@ -130,34 +140,82 @@ public class FramePrincipal extends javax.swing.JFrame {
                 btnGOActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 260, 77, -1));
+        getContentPane().add(btnGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 270, 77, -1));
 
         kl1.setText("kl");
-        getContentPane().add(kl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 160, 20));
+        getContentPane().add(kl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 160, 20));
 
         Costo1.setText("Costo");
-        getContentPane().add(Costo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
+        getContentPane().add(Costo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, -1, -1));
 
         kl2.setText("kl");
-        getContentPane().add(kl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 160, 20));
+        getContentPane().add(kl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 160, 20));
 
         Costo2.setText("Costo");
-        getContentPane().add(Costo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, -1, -1));
+        getContentPane().add(Costo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, -1, -1));
 
         kl3.setText("kl");
-        getContentPane().add(kl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 160, 20));
+        getContentPane().add(kl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, 160, 20));
 
         Costo3.setText("Costo");
-        getContentPane().add(Costo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, -1, -1));
+        getContentPane().add(Costo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 300, -1, -1));
 
         CostoT.setText("Costo Total");
-        getContentPane().add(CostoT, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, -1, -1));
+        getContentPane().add(CostoT, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 350, -1, -1));
+
+        num.setText("Número de intentos");
+        getContentPane().add(num, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 380, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_simulacion/Imagenes/wp2985454.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 440));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 440));
 
         jLabel13.setText("jLabel13");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 370, -1, -1));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Xi", "Distribuccion", "Kilolitros"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 440, 450, 190));
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Xi 2", "Distribuccion 2", "Kilolitros 2"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 440, 450, 190));
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Xi 3", "Distribuccion 3", "Kilolitros 3"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 630, 450, 170));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -181,15 +239,18 @@ public class FramePrincipal extends javax.swing.JFrame {
          if(a01<b01  & b01<c01){
           double r;
           double comp = ((b01-a01)/(c01-a01));
+          
           for(int i = 0 ; i<100 ; i++){
               r = Math.random()*1;
               cont ++;
+             
                pro += result;
+               
               if(r>=comp){
                   double caso1 = (comp - r)*(c01-a01)*(c01-b01)+((b01-c01)*(b01-c01));
                   if(caso1>0){
                        result = c01 - Math.sqrt(caso1);
-                      System.out.println("X" + cont + " " + "es -->" + result);
+                      //System.out.println("X" + cont + " " + "es -->" + result);
                  }else{
                       System.out.println("Raiz imaginaria");        
                  }   
@@ -197,21 +258,32 @@ public class FramePrincipal extends javax.swing.JFrame {
                   double caso2 = r*(c01-a01)*(b01-a01);
                   if(caso2>0){
                       result = a01 + Math.sqrt(caso2);
-                      System.out.println("X" + cont + " " + "es -->" + result);
+                      //System.out.println("X" + cont + " " + "es -->" + result);
                   }else{
                       System.out.println("Raiz imaginaria");
                   }
                   
-              }           
+              }
+               String resultado = String.valueOf(result);
+               String contar = String.valueOf(cont);
+               String kilos = String.valueOf(result*1000);
+               ComOne dat = new ComOne(contar,resultado,kilos);
+                Lista.add(dat);
           }
+          
          }else{
              JOptionPane.showMessageDialog(null,"la condicion a<b<c no se cumple");
       }
         String x = String.valueOf((pro/100)*1000);
         String c = String.valueOf((pro/100)*1000*125);
-           Costo1.setText("Costo $" + c);
-         kl1.setText("Kl " + x);
-        System.out.println("promedio " + pro/100);
+        Costo1.setText("Costo $" + c);
+        kl1.setText("Kl " + x);
+       // System.out.println("promedio " + pro/100);
+        mostrar(); 
+        
+        
+      
+       
      //-------------------Combustible2--------------------------------
      double a02 = Double.parseDouble(a2.getText());
         double b02 = Double.parseDouble(b2.getText());
@@ -239,7 +311,7 @@ public class FramePrincipal extends javax.swing.JFrame {
                   double caso1 = (comp - r)*(c02-a02)*(c02-b02)+((b02-c02)*(b02-c02));
                   if(caso1>0){
                        result02 = c02 - Math.sqrt(caso1);
-                      System.out.println("X" + cont + " " + "es -->" + result02);
+                     // System.out.println("X" + cont + " " + "es -->" + result02);
                  }else{
                       System.out.println("Raiz imaginaria");        
                  }   
@@ -247,12 +319,18 @@ public class FramePrincipal extends javax.swing.JFrame {
                   double caso2 = r*(c02-a02)*(b02-a02);
                   if(caso2>0){
                       result02 = a02 + Math.sqrt(caso2);
-                      System.out.println("X" + cont + " " + "es -->" + result02);
+                      //System.out.println("X" + cont + " " + "es -->" + result02);
                   }else{
                       System.out.println("Raiz imaginaria");
                   }
                   
-              }           
+              }   
+              
+               String resultado = String.valueOf(result02);
+               String contar = String.valueOf(cont02);
+               String kilos = String.valueOf(result02*1000);
+               ComOne dat = new ComOne(contar,resultado,kilos);
+               Lista2.add(dat);
           }
          }else{
              JOptionPane.showMessageDialog(null,"la condicion a<b<c no se cumple");
@@ -261,7 +339,8 @@ public class FramePrincipal extends javax.swing.JFrame {
         String d = String.valueOf((pro02/100)*1000*120);
            Costo2.setText("Costo $" + d);
          kl2.setText("Kl " + x02);
-        System.out.println("promedio " + pro02/100);
+       // System.out.println("promedio " + pro02/100);
+        mostrar2();
     //----------------Combustible3-------------------------------------------
     
     double a03 = Double.parseDouble(a3.getText());
@@ -290,7 +369,7 @@ public class FramePrincipal extends javax.swing.JFrame {
                   double caso1 = (comp - r)*(c03-a03)*(c03-b03)+((b03-c03)*(b03-c03));
                   if(caso1>0){
                        result03 = c03 - Math.sqrt(caso1);
-                      System.out.println("X" + cont03 + " " + "es -->" + result03);
+                     // System.out.println("X" + cont03 + " " + "es -->" + result03);
                  }else{
                       System.out.println("Raiz imaginaria");        
                  }   
@@ -298,13 +377,20 @@ public class FramePrincipal extends javax.swing.JFrame {
                   double caso2 = r*(c03-a03)*(b03-a03);
                   if(caso2>0){
                       result03 = a03 + Math.sqrt(caso2);
-                      System.out.println("X" + cont03 + " " + "es -->" + result03);
+                     // System.out.println("X" + cont03 + " " + "es -->" + result03);
                   }else{
                       System.out.println("Raiz imaginaria");
                   }
                   
-              }           
+              }
+              
+               String resultado = String.valueOf(result03);
+               String contar = String.valueOf(cont03);
+               String kilos = String.valueOf(result03*1000);
+               ComOne dat = new ComOne(contar,resultado,kilos);
+               Lista3.add(dat);
           }
+          
          }else{
              JOptionPane.showMessageDialog(null,"la condicion a<b<c no se cumple");
       }
@@ -312,7 +398,8 @@ public class FramePrincipal extends javax.swing.JFrame {
         String e = String.valueOf((pro03/100)*1000*200);
            Costo3.setText("Costo $" + e);
          kl3.setText("Kl " + x03);
-        System.out.println("promedio " + pro03/100);
+         mostrar3();
+      //  System.out.println("promedio " + pro03/100);
     //-----------------------Binomial---------------------------------------------
     Binomial bi = new Binomial ();
     
@@ -320,49 +407,131 @@ public class FramePrincipal extends javax.swing.JFrame {
     int n = Integer.parseInt(txtn.getText());
     double k = Double.parseDouble(txtk.getText());
     int contador = 0;
+    int j = 0;
     double costo1 = (pro/100)*1000*125;
     double costo2 = (pro02/100)*1000*120;
     double costo3 = (pro03/100)*1000*200;
     double costoT = 0;
-    double prom = 0;
+    double prom1 = 0, prom2 = 0, prom3 = 0;
+    int f = 0, f2 = 0, f3 = 0;
     
-        //for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
+            j++;
+            f = bi.Bin(p,n);
+            prom1 += f;
+            
+            f2 = bi.Bin(p,n);
+            prom2 += f2;
+            
+            f3 = bi.Bin(p,n);
+            prom3 += f3;
+            
+            System.out.println("Intento " + j + " --> " + bi.Bin(p,n) );
+            
+        }
+        System.out.println("1 " + prom1 +"2 " + prom2+"3 " + prom3);
+        double p1 = prom1/100;
+        double p2 = prom2/100;
+        double p3 = prom3/100;
             
                 if(p == 0.9){
-                    int f = bi.Bin(p,n);
-                    if (f<=k){
+                    
+                    String nume = String.valueOf(p1);
+                    num.setText("Número de intentos " + nume);
+
+                    if (p1<=k){
                     costoT = costo1*k;
                     }else{
                     costoT = costo1*k + costo1*(f-k);
                     }
+                     
             }   
                 if(p == 0.7){
-                   int f2 = bi.Bin(p,n);
-                    if(f2<k){
+                    String nume = String.valueOf(p2);
+                    num.setText("Número de intentos " + nume);
+                    
+                    if(p2<k){
                         costoT = costo2*k;
                     }else{
                         costoT = costo2*k + costo2*(f2-k);
                     }
+                   
                 }
                 if(p==0.8){
-                    int f3 = bi.Bin(p,n);
-                     if(f3<k){
+                    String nume = String.valueOf(p3);
+                    num.setText("Número de intentos " + nume);
+                     if(p3<k){
                          costoT = costo3*k;
                      }else{
                          costoT = costo3*k + costo3*(f3-k);
-                     }   
+                     }
+                      
                 }
                 
                String cos = String.valueOf(costoT);
-               CostoT.setText("Costo total $" + cos);
-                    
-          //}
-        
+               CostoT.setText("Costo total $" + cos); 
+              
+               
+              
     }//GEN-LAST:event_btnGOActionPerformed
-
+    
+    
     /**
+     * 
      * @param args the command line arguments
      */
+    
+    public void mostrar(){
+      
+        String matriz [] [] = new String [Lista.size()][3];
+        for (int i = 0; i <Lista.size(); i++) {
+            matriz[i][0] = Lista.get(i).getIteracion();
+            matriz[i][1] = Lista.get(i).getDistribuccion();
+            matriz[i][2] = Lista.get(i).getKilolitros();
+            
+        }
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            matriz,
+            new String [] {
+               "Xi", "Distribuccion", "Kilolitros"
+            }
+        ));  
+    }
+    
+    public void mostrar2(){
+      
+        String matriz [] [] = new String [Lista2.size()][3];
+        for (int i = 0; i <Lista2.size(); i++) {
+            matriz[i][0] = Lista2.get(i).getIteracion();
+            matriz[i][1] = Lista2.get(i).getDistribuccion();
+            matriz[i][2] = Lista2.get(i).getKilolitros();
+            
+        }
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            matriz,
+            new String [] {
+               "Xi 2", "Distribuccion 2", "Kilolitros 2"
+            }
+        ));  
+    }
+    
+    public void mostrar3(){
+      
+        String matriz [] [] = new String [Lista3.size()][3];
+        for (int i = 0; i <Lista3.size(); i++) {
+            matriz[i][0] = Lista3.get(i).getIteracion();
+            matriz[i][1] = Lista3.get(i).getDistribuccion();
+            matriz[i][2] = Lista3.get(i).getKilolitros();
+            
+        }
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            matriz,
+            new String [] {
+               "Xi 2", "Distribuccion 2", "Kilolitros 2"
+            }
+        ));  
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -423,9 +592,16 @@ public class FramePrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JLabel kl1;
     private javax.swing.JLabel kl2;
     private javax.swing.JLabel kl3;
+    private javax.swing.JLabel num;
     private javax.swing.JTextField probabilidad;
     private javax.swing.JTextField txtk;
     private javax.swing.JTextField txtn;
